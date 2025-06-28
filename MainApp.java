@@ -1,27 +1,35 @@
 public class MainApp{
     public static void main(String[] args){
-        Dog dog = new Dog();
-        dog.speak();
+    Dog dog = new Dog();
+    Cat cat = new Cat();
+    dog.speak();
+    dog.eat();
+    cat.speak();
+    cat.eat();
     }
 }
-class Animal{
-    public void speak() {
-        System.out.println("Animal speaks");
-    }
-    public void eat(){
-        System.out.println("Animal eats");
-    }
-}
-class Dog extends Animal{
+interface Animal{
+    void speak();
+    void eat();
+
+class Dog implements ani,a
     @Override
-    public void speak() {
+    public abstract void speak() {
         System.out.println("Bark");
     }
-class Cat extends Animal{
+abstract class Cat extends Animal{
     @Override
-    public void speak(){
+    public abstract  void speak(){
         System.out.println("Meow");
     }
 }
+    @Override
+    public void eat() {
+        System.out.println("Dog eats");
+    }
 
+    @Override
+public void eat() {
+        System.out.println("Cat eats");
+    }
 }
